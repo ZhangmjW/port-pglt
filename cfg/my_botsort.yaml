@@ -1,0 +1,21 @@
+﻿# Ultralytics BoT-SORT tracker defaults for mode="track"
+# 这组参数偏向实时工程：在关键帧检测场景下尽量减轻计算负担。
+
+tracker_type: botsort
+track_high_thresh: 0.3
+track_low_thresh: 0.15
+new_track_thresh: 0.4
+track_buffer: 90
+match_thresh: 0.75
+fuse_score: True
+
+# BoT-SORT specifics
+# 固定机位优先用 none 提速；如果摄像头有抖动或轻微位移，再切回 sparseOptFlow。
+gmc_method: none
+
+# ReID model related thresh
+proximity_thresh: 0.6
+appearance_thresh: 0.55
+
+with_reid: false
+model: auto

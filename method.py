@@ -19,14 +19,13 @@ try:
 except ImportError:
     clear_output = None
 
-BASE_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = BASE_DIR.parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent
 
 from ultralytics import YOLO
 
 # ===================== 可自定义参数 =====================
 MODEL_PATH = PROJECT_ROOT / "models" / "best.pt"
-VIDEO_PATH = ""
+VIDEO_PATH = PROJECT_ROOT / "video" / "test2.mp4"
 TRACKER_CFG_PATH = PROJECT_ROOT / "cfg" / "my_botsort.yaml"
 SCENE_DIVISION_PATH = PROJECT_ROOT / "scene-division" / "scene-division.json"
 
